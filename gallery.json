@@ -1,6 +1,42 @@
 {
   "items": [
     {
+      "id": "ngntrp_20261023_1754",
+      "title": "",
+      "date": "2026-10-23",
+      "image": "images/2026/10/ngntrp_20261023_1754.webp",
+      "width": 1024,
+      "height": 1024,
+      "alt": "Painting in the NGNTRP style: a Centauromachia",
+      "prompt": "In the NGNTRP style, a painting of a half biological half mechanical centauer after the renaissance 'Centauromachia', heavy impasto brushstrokes, visible paint application, abstract.",
+      "seed": 20261024754,
+      "steps": 45,
+      "guidance_scale": 7.5,
+      "lora_scale": 2.5,
+      "license": "CC0-1.0",
+      "model": "NGNTRP LoRA v3",
+      "training_data": "46 original paintings by the artist plus 300 public-domain / CC0 images from the PD12M dataset (CDLA-Permissive-2.0, dataset revision 867988b0), used as regularisation.",
+      "meta": "meta/ngntrp_20261023_1754.json"
+    },
+    {
+      "id": "ngntrp_20261023_1755",
+      "title": "",
+      "date": "2026-10-23",
+      "image": "images/2026/10/ngntrp_20261023_1755.webp",
+      "width": 1024,
+      "height": 1024,
+      "alt": "Painting in the NGNTRP style: a Centauromachia",
+      "prompt": "In the NGNTRP style, a painting of a half biological half mechanical centauer after the renaissance 'Centauromachia', heavy impasto brushstrokes, visible paint application, abstract.",
+      "seed": 20261024755,
+      "steps": 45,
+      "guidance_scale": 7.5,
+      "lora_scale": 2.5,
+      "license": "CC0-1.0",
+      "model": "NGNTRP LoRA v3",
+      "training_data": "46 original paintings by the artist plus 300 public-domain / CC0 images from the PD12M dataset (CDLA-Permissive-2.0, dataset revision 867988b0), used as regularisation.",
+      "meta": "meta/ngntrp_20261023_1755.json"
+    },
+    {
       "id": "ngntrp_20261023_2351",
       "title": "",
       "date": "2026-10-23",
@@ -253,5 +289,5 @@
       "meta": "meta/ngntrp_20261023_12.json"
     }
   ],
-  "updated": "2026-10-23T15:48:09+00:00"
+  "updated": "2026-10-23T15:55:35+00:00"
 }
