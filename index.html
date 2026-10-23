@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Centauromachia Redux</title>
+<meta name="description" content="Experimental project on illustration and authorship by Negentrop.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="site">
+    <h1 class="name"><a href="index.html">Centauromachia Redux</a> <span class="beta">Beta</span></h1>
+    <p class="byline">Experimental Project on Illustration and Authorship by Negentrop</p>
+    <nav class="main" aria-label="Main"><a href="index.html" aria-current="page">Gallery</a><a href="about.html">About</a><a href="takedown.html">Takedown requests</a></nav>
+  </header>
+  <main>
+    <p class="beta-note"><strong>Beta.</strong> This project is in an early test run. The look of the images, the settings used and the pages themselves may change while it runs. Every image&#8217;s details record exactly how it was made.</p>
+    <div class="grid" id="grid" aria-live="polite"></div>
+    <noscript><p class="empty">This gallery needs JavaScript. The images are also listed in <a href="gallery.json">gallery.json</a>.</p></noscript>
+  </main>
+  <dialog id="viewer" aria-label="Image details"></dialog>
+  <footer class="site">
+    <p>The images on this site are AI-generated (Stable Diffusion XL with the NGNTRP LoRA) and released under
+    <a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="license">CC0 1.0</a> unless an image says otherwise.</p>
+    <p><a href="about.html#making">How the images are made</a> &middot; <a href="takedown.html">Takedown requests</a></p>
+  </footer>
+</div>
+<script>
+const LICENCES = {
+  "CC0-1.0": ["CC0 1.0", "https://creativecommons.org/publicdomain/zero/1.0/"],
+  "CC-BY-SA-4.0": ["CC BY-SA 4.0", "https://creativecommons.org/licenses/by-sa/4.0/"]
+};
+
+const $ = (id) => document.getElementById(id);
+const grid = $("grid");
+const viewer = $("viewer");
+
+function el(tag, props = {}, children = []) {
+  const node = Object.assign(document.createElement(tag), props);
+  children.forEach((c) => node.append(c));
+  return node;
+}
+
+function row(dl, label, value) {
+  if (value === undefined || value === null || value === "") return;
+  dl.append(el("dt", { textContent: label }), el("dd", { textContent: String(value) }));
+}
+
+function openViewer(item) {
+  const dl = el("dl");
+  row(dl, "Image ID", item.id);
+  row(dl, "Model", item.model);
+  row(dl, "Trained on", item.training_data);
+  row(dl, "Seed", item.seed);
+  row(dl, "Steps", item.steps);
+  row(dl, "Guidance", item.guidance_scale);
+  row(dl, "LoRA strength", item.lora_scale);
+
+  const lic = LICENCES[item.license];
+  const links = el("p", { className: "meta" });
+  if (lic) links.append(el("a", { href: lic[1], textContent: "Licence: " + lic[0], rel: "license" }), " · ");
+  links.append(el("a", { href: item.image, textContent: "Image file" }), " · ",
+               el("a", { href: item.meta, textContent: "Generation record (JSON)" }), " · ",
+               el("a", { href: "takedown.html", textContent: "Takedown requests" }));
+
+  const img = el("img", { src: item.image, alt: item.alt || "" });
+  if (item.width) img.width = item.width;
+  if (item.height) img.height = item.height;
+
+  const close = el("button", { className: "close", textContent: "Close", type: "button" });
+  close.addEventListener("click", () => viewer.close());
+
+  const side = el("div", {}, [
+    el("h2", { textContent: item.title || "Untitled" }),
+    el("p", { className: "meta", textContent: item.date || "" }),
+    dl,
+    el("p", { className: "meta", textContent: "Prompt" }),
+    el("p", { className: "prompt", textContent: item.prompt || "" }),
+    links,
+    close
+  ]);
+  viewer.replaceChildren(el("div", { className: "dlg" }, [img, side]));
+  viewer.showModal();
+  close.focus();
+}
+
+viewer.addEventListener("click", (e) => { if (e.target === viewer) viewer.close(); });
+
+fetch("gallery.json", { cache: "no-cache" })
+  .then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })
+  .then((data) => {
+    const items = data.items || [];
+    if (!items.length) { grid.append(el("p", { className: "empty", textContent: "No images yet." })); return; }
+    items.forEach((item) => {
+      const img = el("img", { src: item.image, alt: item.alt || "", loading: "lazy", decoding: "async" });
+      if (item.width) img.width = item.width;
+      if (item.height) img.height = item.height;
+      const tile = el("button", { className: "tile", type: "button" }, [img]);
+      tile.setAttribute("aria-label", (item.title || "Untitled") + ", " + (item.date || "") + ": open details");
+      tile.addEventListener("click", () => openViewer(item));
+      grid.append(tile);
+    });
+  })
+  .catch(() => { grid.append(el("p", { className: "empty", textContent: "The gallery could not be loaded." })); });
+</script>
+<script src="site.js"></script>
+</body>
+</html>

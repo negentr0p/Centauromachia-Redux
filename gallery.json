@@ -1,0 +1,41 @@
+{
+  "items": [
+    {
+      "id": "ngntrp_20261023_10",
+      "title": "",
+      "date": "2026-10-23",
+      "image": "images/2026/10/ngntrp_20261023_10.webp",
+      "width": 1024,
+      "height": 1024,
+      "alt": "Painting in the NGNTRP style: a Centauromachia",
+      "prompt": "In the NGNTRP style, a painting of the 'Centauromachia' after Piero di Cosimo, heavy impasto brushstrokes, visible paint application, abstract.",
+      "seed": 20261023010,
+      "steps": 45,
+      "guidance_scale": 8.25,
+      "lora_scale": 2.5,
+      "license": "CC0-1.0",
+      "model": "NGNTRP LoRA v3",
+      "training_data": "46 original paintings by the artist plus 300 public-domain / CC0 images from the PD12M dataset (CDLA-Permissive-2.0, dataset revision 867988b0), used as regularisation.",
+      "meta": "meta/ngntrp_20261023_10.json"
+    },
+    {
+      "id": "ngntrp_20261023_12",
+      "title": "",
+      "date": "2026-10-23",
+      "image": "images/2026/10/ngntrp_20261023_12.webp",
+      "width": 1024,
+      "height": 1024,
+      "alt": "Painting in the NGNTRP style: a Centauromachia",
+      "prompt": "In the NGNTRP style, a painting of the 'Centauromachia' after Piero di Cosimo, heavy impasto brushstrokes, visible paint application, abstract.",
+      "seed": 20261023012,
+      "steps": 45,
+      "guidance_scale": 8.25,
+      "lora_scale": 2.5,
+      "license": "CC0-1.0",
+      "model": "NGNTRP LoRA v3",
+      "training_data": "46 original paintings by the artist plus 300 public-domain / CC0 images from the PD12M dataset (CDLA-Permissive-2.0, dataset revision 867988b0), used as regularisation.",
+      "meta": "meta/ngntrp_20261023_12.json"
+    }
+  ],
+  "updated": "2026-10-23T15:08:08+00:00"
+}

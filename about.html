@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About the project &middot; Centauromachia Redux</title>
+<meta name="description" content="An experimental project on illustration and authorship: abstract, about Negentrop, how the images are made.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="site">
+    <p class="name"><a href="index.html">Centauromachia Redux</a> <span class="beta">Beta</span></p>
+    <p class="byline">Experimental Project on Illustration and Authorship by Negentrop</p>
+    <nav class="main" aria-label="Main"><a href="index.html">Gallery</a><a href="about.html" aria-current="page">About</a><a href="takedown.html">Takedown requests</a></nav>
+  </header>
+  <main class="prose">
+    <h1>About the project</h1>
+    <p class="beta-note"><strong>Beta.</strong> This project is in an early test run. The look of the images, the settings used and the pages themselves may change while it runs. Every image&#8217;s details record exactly how it was made.</p>
+    
+    <section id="abstract">
+      <h2>Abstract</h2>
+      <p class="abstract">In Philip K. Dick&#8217;s 1977 essay &#8220;If You Find This World Bad,&#8221; he envisions a painting that continually transforms itself&#8212;not through linear replacement but lateral shifts within the same canvas. &#8220;Centauromachia Redux&#8221; realizes this metaphor through an AI illustration model, trained on the artist&#8217;s style, generating perpetual renditions of Renaissance centauromachia. The project explores Kasparov&#8217;s centaur chess paradigm of human-AI collaboration, positioning centaurs as civilized entities where technology constitutes humanity itself, questioning who represents civilization amid destabilized human-machine hierarchies. Framed as a &#8220;Metanoia,&#8221; the project draws on Jung&#8217;s personal metamorphosis to integrate AI critically within practice, producing a new working mythology as the illustrator curates machinic style transfer.</p>
+    </section>
+
+    <section id="bio">
+      <h2>About Negentrop</h2>
+      <p>Negentrop is an experimental illustration project, an attempt at a new way of working. Illustration has long
+      illuminated texts; with the image now in the ascendant, Negentrop illustrates the apparatus of image-making from
+      within, and its methodology is negentropy: beginning again from chaotic image overload and reordering it to find new
+      possibilities.</p>
+      <p>It belongs to a lineage of experimental attempts to short-circuit authorship, from Eduardo Paolozzi&#8217;s
+      <em>Bunk</em> lecture (1952) to Walter Benjamin&#8217;s unfinished <em>Arcades Project</em>, which quotes without
+      quotation marks. Negentrop has no end point and no named author.</p>
+      <p>It responds to a contemporary mode of cybernetic and eschatological thinking, treating religion as a technological
+      construct and eschatology as a technique that can be re-engineered. Where the eschatological urge anticipates the end
+      of the world or of art, Negentrop turns it on the myth of the individual creator, which has to go before work can
+      begin again. The result is a negentropic eschatology, aware of the contradiction in the term.</p>
+      <p>All images it produces are released under CC0, with their provenance documented. Any talk about creativity, it
+      contends, must also address the end of ownership.</p>
+    </section>
+
+    <section id="making">
+      <h2>How the images are made</h2>
+      <p>Every image on this site was generated with a diffusion model: Stable Diffusion XL 1.0 base plus the NGNTRP LoRA,
+      trained on original paintings by Negentrop. From LoRA v3 onwards a small set of public-domain and CC0 images from the
+      <a href="https://huggingface.co/datasets/Spawning/PD12M">PD12M</a> dataset is used alongside the paintings, as
+      regularisation. Each image&#8217;s details list exactly what its LoRA version was trained on. The SDXL base model&#8217;s own
+      training data is not publicly itemised.</p>
+      <p>Open any image in the gallery to see its prompt, seed, settings (including the LoRA strength, which is how strongly the NGNTRP style is applied) and model versions. The same note is embedded in the
+      image file, marking it as AI-generated, although some platforms remove embedded metadata when images are shared.</p>
+      <p>Every image is reviewed by the artist before it is published.</p>
+    </section>
+
+    <section id="licences">
+      <h2>Licences</h2>
+      <p>Unless an image says otherwise, images are released under
+      <a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="license">CC0 1.0</a> (no rights reserved).
+      The LoRA weights carry the CreativeML Open RAIL++-M licence.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p><a class="mail" href="#" data-u="negentrop.corps" data-d="gmail.com">negentrop.corps [at] gmail.com</a></p>
+      <p>To ask for an image to be removed, see <a href="takedown.html">Takedown requests</a>.</p>
+    </section>
+  </main>
+  <footer class="site">
+    <p>The images on this site are AI-generated (Stable Diffusion XL with the NGNTRP LoRA) and released under
+    <a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="license">CC0 1.0</a> unless an image says otherwise.</p>
+    <p><a href="about.html#making">How the images are made</a> &middot; <a href="takedown.html">Takedown requests</a></p>
+  </footer>
+</div>
+<script src="site.js"></script>
+</body>
+</html>
