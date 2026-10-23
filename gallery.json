@@ -1,6 +1,60 @@
 {
   "items": [
     {
+      "id": "ngntrp_20261023_473",
+      "title": "",
+      "date": "2026-10-23",
+      "image": "images/2026/10/ngntrp_20261023_473.webp",
+      "width": 1024,
+      "height": 1024,
+      "alt": "Painting in the NGNTRP style: a Centauromachia",
+      "prompt": "In the NGNTRP style, a painting of the 'Centauromachia' after Piero di Cosimo, from the perspective of machine centaurs, the battle of lapiths and machines, heavy impasto brushstrokes, visible paint application, abstract.",
+      "seed": 20261023473,
+      "steps": 45,
+      "guidance_scale": 7.0,
+      "lora_scale": 2.5,
+      "license": "CC0-1.0",
+      "model": "NGNTRP LoRA v3",
+      "training_data": "46 original paintings by the artist plus 300 public-domain / CC0 images from the PD12M dataset (CDLA-Permissive-2.0, dataset revision 867988b0), used as regularisation.",
+      "meta": "meta/ngntrp_20261023_473.json"
+    },
+    {
+      "id": "ngntrp_20261023_474",
+      "title": "",
+      "date": "2026-10-23",
+      "image": "images/2026/10/ngntrp_20261023_474.webp",
+      "width": 1024,
+      "height": 1024,
+      "alt": "Painting in the NGNTRP style: a Centauromachia",
+      "prompt": "In the NGNTRP style, a painting of the 'Centauromachia' after Piero di Cosimo, from the perspective of machine centaurs, the battle of lapiths and machines, heavy impasto brushstrokes, visible paint application, abstract.",
+      "seed": 20261023474,
+      "steps": 45,
+      "guidance_scale": 7.0,
+      "lora_scale": 2.5,
+      "license": "CC0-1.0",
+      "model": "NGNTRP LoRA v3",
+      "training_data": "46 original paintings by the artist plus 300 public-domain / CC0 images from the PD12M dataset (CDLA-Permissive-2.0, dataset revision 867988b0), used as regularisation.",
+      "meta": "meta/ngntrp_20261023_474.json"
+    },
+    {
+      "id": "ngntrp_20261023_475",
+      "title": "",
+      "date": "2026-10-23",
+      "image": "images/2026/10/ngntrp_20261023_475.webp",
+      "width": 1024,
+      "height": 1024,
+      "alt": "Painting in the NGNTRP style: a Centauromachia",
+      "prompt": "In the NGNTRP style, a painting of the 'Centauromachia' after Piero di Cosimo, from the perspective of machine centaurs, the battle of lapiths and machines, heavy impasto brushstrokes, visible paint application, abstract.",
+      "seed": 20261023475,
+      "steps": 45,
+      "guidance_scale": 7.0,
+      "lora_scale": 2.5,
+      "license": "CC0-1.0",
+      "model": "NGNTRP LoRA v3",
+      "training_data": "46 original paintings by the artist plus 300 public-domain / CC0 images from the PD12M dataset (CDLA-Permissive-2.0, dataset revision 867988b0), used as regularisation.",
+      "meta": "meta/ngntrp_20261023_475.json"
+    },
+    {
       "id": "ngntrp_20261023_1754",
       "title": "",
       "date": "2026-10-23",
@@ -289,5 +343,5 @@
       "meta": "meta/ngntrp_20261023_12.json"
     }
   ],
-  "updated": "2026-10-23T15:55:35+00:00"
+  "updated": "2026-10-23T16:01:57+00:00"
 }
